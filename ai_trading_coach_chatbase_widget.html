@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Trading Coach</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background: #f8f9fa;
+    }
+  </style>
+</head>
+<body>
+  <script>
+  (function(){
+    if(!window.chatbase || window.chatbase("getState")!=="initialized"){
+      window.chatbase=(...args)=>{if(!window.chatbase.q){window.chatbase.q=[]}window.chatbase.q.push(args)};
+      window.chatbase=new Proxy(window.chatbase,{get(target,prop){if(prop==="q"){return target.q}return (...args)=>target(prop,...args)}});
+      const onLoad=function(){
+        const script=document.createElement("script");
+        script.src="https://www.chatbase.co/embed.min.js";
+        script.id="i3yW1RfCgTssb_aDe8lfI";
+        script.domain="www.chatbase.co";
+        document.body.appendChild(script);
+      };
+      if(document.readyState==="complete"){onLoad()}else{window.addEventListener("load",onLoad)}
+    }
+  })();
+  </script>
+</body>
+</html>
